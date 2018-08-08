@@ -14,9 +14,10 @@ if $notnext; then
   exit
 fi
 
-mkdir -p ~/.config/nvim
-ln -s ./toml ~/.config/nvim/toml
-ln -s ./init.vim ~/.config/nvim/init.vim
+nvimdir=~/.config/nvim
+mkdir -p $nvimdir
+ln -s $(pwd)/toml $nvimdir/toml
+ln -s $(pwd)/init.vim $nvimdir/init.vim
 
 deindir=~/.cache/dein/repos/github.com/Shougo/dein.vim
 if [ ! -e $deindir ]; then
