@@ -1,0 +1,14 @@
+-- vim: ft=haskell
+Config { font = "xft:TakaoPGothic :size=13"
+       , bgColor = "#1c1c1c"
+       , fgColor = "#404040"
+       , position =  Bottom
+       , overrideRedirect = False
+       , sepChar = "%"
+       , alignSep = "}{"
+       , commands = [ Run StdinReader
+                    --, Run Date "%a %m%d %M%D" "date" 10
+                    ]
+       , template = " %StdinReader% }{<fc=#ece391>%date%</fc> "
+       }
+

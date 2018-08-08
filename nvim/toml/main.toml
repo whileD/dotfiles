@@ -1,0 +1,32 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#enable_smart_case = 1
+  let g:deoplete#auto_complete_start_length = 1
+
+  inoremap <expr><tab> pumvisible() ? "\<C-n>" : "<\tab>"
+  inoremap <expr><s-tab> pumvisible() ? "<C-p>" : "<C-h>"
+'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = {
+  \  'colorscheme' : 'one',
+  \}
+'''
+
+# Git
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# Color scheme
+[[plugins]]
+repo = 'joshdick/onedark.vim'
