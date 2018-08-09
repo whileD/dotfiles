@@ -8,7 +8,7 @@ hook_add = '''
   let g:deoplete#enable_smart_case = 1
   let g:deoplete#auto_complete_start_length = 1
 
-  inoremap <expr><tab> pumvisible() ? "\<C-n>" : "<\tab>"
+  inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
   inoremap <expr><s-tab> pumvisible() ? "<C-p>" : "<C-h>"
 '''
 
