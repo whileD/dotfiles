@@ -59,9 +59,12 @@ main = do
     , logHook = myLogHook xmproc
     , layoutHook = avoidStruts $ myLayout
     , manageHook = manageHook defaultConfig <+> manageDocks
+    , startupHook = myStartupHook
     , handleEventHook = fullscreenEventHook}
 
 myLayout = spacing gapwidth $ gaps [(U, gwU),(D, gwD),(L, gwL),(R, gwR)]
   $ (ResizableTall 1 (1/205) (120/205) [])
 
-
+myStartupHook = do
+  spawn "nitrogen --set-zoom-fill $WALLPAPER"
+  spawn "compton -b"
