@@ -1,2 +1,6 @@
+# vue
 [[plugins]]
-repo = ''
+repo = 'posva/vim-vue'
+on_ft = ['vue', 'jsp']
+
+

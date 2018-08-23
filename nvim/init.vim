@@ -11,6 +11,7 @@ if dein#load_state('~/.cache/dein')
   " TOML:
   let s:toml_dir = '~/.config/nvim/toml'
   call dein#load_toml(s:toml_dir.'/main.toml', { 'lazy':0 })
+  call dein#load_toml(s:toml_dir.'/lang.toml', { 'lazy':1})
 
   call dein#end()
   call dein#save_state()
@@ -27,7 +28,12 @@ set tabstop=2
 set shiftwidth=2
 set updatetime=500
 set cursorline
+set ambiwidth=double
 colorscheme onedark
+
+" filetype --------------------
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+autocmd FileType vue syntax sync fromstart
 
 " Keybind --------------------
 " Window

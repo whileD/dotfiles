@@ -2,6 +2,17 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+build = 'bash install.sh'
+rev = 'next'
+hook_add = '''
+  let g:LanguageClient_serverCommands = {
+    \ 'vue': ['vls'],
+    \}
+'''
+# vls = 'node vue-language-server'
+
+[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
