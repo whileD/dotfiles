@@ -29,7 +29,15 @@ set shiftwidth=2
 set updatetime=500
 set cursorline
 set ambiwidth=double
-colorscheme onedark
+
+" Colorscheme
+colorscheme badwolf
+
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none 
 
 " filetype --------------------
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
@@ -43,10 +51,10 @@ nnoremap <Space>k <C-w>k
 nnoremap <Space>l <C-w>l
 nnoremap <Space>r <C-w>r
 nnoremap <Space>o <C-w>o
-nnoremap <C-S-h> <C-w><
-nnoremap <C-S-j> <C-w>-
-nnoremap <C-S-k> <C-w>+
-nnoremap <C-S-l> <C-w>>
+" nnoremap <C-S-h> <C-w><
+" nnoremap <C-S-j> <C-w>-
+" nnoremap <C-S-k> <C-w>+
+" nnoremap <C-S-l> <C-w>>
 
 " Tab
 nnoremap st :<C-u>tabnew<CR>

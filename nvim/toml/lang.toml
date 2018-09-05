@@ -3,4 +3,12 @@
 repo = 'posva/vim-vue'
 on_ft = ['vue', 'jsp']
 
+# go
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
 
+# toml
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']

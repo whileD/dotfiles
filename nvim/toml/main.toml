@@ -8,6 +8,7 @@ rev = 'next'
 hook_add = '''
   let g:LanguageClient_serverCommands = {
     \ 'vue': ['vls'],
+    \ 'd': ['~/.dub/packages/.bin/dls-latest/dls'],
     \}
 '''
 # vls = 'node vue-language-server'
@@ -22,6 +23,18 @@ hook_add = '''
   inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
   inoremap <expr><s-tab> pumvisible() ? "<C-p>" : "<C-h>"
 '''
+
+# Snippets
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+hook_add = '''
+  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k>     <Plug>(neosnippet_expand_target)
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -41,3 +54,6 @@ repo = 'tpope/vim-fugitive'
 # Color scheme
 [[plugins]]
 repo = 'joshdick/onedark.vim'
+
+[[plugins]]
+repo = 'sjl/badwolf'
