@@ -10,6 +10,9 @@ hook_add = '''
     \ 'vue': ['vls'],
     \ 'd': ['~/.dub/packages/.bin/dls-latest/dls'],
     \}
+  nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+  nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+  nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 '''
 # vls = 'node vue-language-server'
 
@@ -42,6 +45,13 @@ hook_add = '''
   let g:lightline = {
   \  'colorscheme' : 'one',
   \}
+'''
+
+# file
+[[plugins]]
+repo = 'cocopon/vaffle.vim'
+hook_add = '''
+  nnoremap <Space>f :Vaffle %:h<CR>
 '''
 
 # Git
