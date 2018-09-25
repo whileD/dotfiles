@@ -30,7 +30,7 @@ set updatetime=500
 set cursorline
 set ambiwidth=double
 
-set clipboard=unnamed,autoselect
+set clipboard+=unnamedplus
 
 " Colorscheme
 colorscheme badwolf
