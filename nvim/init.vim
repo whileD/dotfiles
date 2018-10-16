@@ -11,7 +11,7 @@ if dein#load_state('~/.cache/dein')
   " TOML:
   let s:toml_dir = '~/.config/nvim/toml'
   call dein#load_toml(s:toml_dir.'/main.toml', { 'lazy':0 })
-  call dein#load_toml(s:toml_dir.'/lang.toml', { 'lazy':1})
+  call dein#load_toml(s:toml_dir.'/lang.toml', { 'lazy':1 })
 
   call dein#end()
   call dein#save_state()
@@ -26,7 +26,7 @@ set smartindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set updatetime=500
+set updatetime=100
 set cursorline
 set ambiwidth=double
 
