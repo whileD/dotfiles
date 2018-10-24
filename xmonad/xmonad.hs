@@ -67,4 +67,4 @@ myLayout = spacing gapwidth $ gaps [(U, gwU),(D, gwD),(L, gwL),(R, gwR)]
 
 myStartupHook = do
   spawn "nitrogen --set-zoom-fill $WALLPAPER"
-  spawn "compton -b"
+  -- spawn "compton -b"

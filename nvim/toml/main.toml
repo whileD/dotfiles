@@ -39,6 +39,15 @@ hook_add = '''
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
+# Template
+[[plugins]]
+repo = 'mattn/sonictemplate-vim'
+hook_add = '''
+  let g:sonictemplate_vim_template_dir = [
+  \ '$HOME/.config/nvim/templates'
+  \ ]
+'''
+
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
