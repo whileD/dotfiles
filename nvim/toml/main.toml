@@ -48,11 +48,12 @@ hook_add = '''
   \ ]
 '''
 
+# status line
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
   let g:lightline = {
-  \  'colorscheme' : 'one',
+  \  'colorscheme' : 'Tomorrow_Night',
   \}
 '''
 
@@ -72,7 +73,4 @@ repo = 'tpope/vim-fugitive'
 
 # Color scheme
 [[plugins]]
-repo = 'joshdick/onedark.vim'
-
-[[plugins]]
-repo = 'sjl/badwolf'
+repo = 'chriskempson/vim-tomorrow-theme'

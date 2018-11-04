@@ -32,8 +32,10 @@ set ambiwidth=double
 
 set clipboard+=unnamedplus
 
+set sh=bash
+
 " Colorscheme
-colorscheme badwolf
+colorscheme Tomorrow-Night
 
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
@@ -57,6 +59,7 @@ nnoremap <Space>o <C-w>o
 " nnoremap <C-S-j> <C-w>-
 " nnoremap <C-S-k> <C-w>+
 " nnoremap <C-S-l> <C-w>>
+tnoremap <silent> <ESC> <C-\><C-n>
 
 " Tab
 nnoremap st :<C-u>tabnew<CR>
