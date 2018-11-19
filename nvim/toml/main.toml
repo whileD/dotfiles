@@ -73,4 +73,4 @@ repo = 'tpope/vim-fugitive'
 
 # Color scheme
 [[plugins]]
-repo = 'chriskempson/vim-tomorrow-theme'
+repo = 'morhetz/gruvbox'
