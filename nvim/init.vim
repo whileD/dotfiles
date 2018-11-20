@@ -38,11 +38,11 @@ set sh=bash
 set background=dark
 colorscheme gruvbox
 
-" highlight Normal ctermbg=none
-" highlight NonText ctermbg=none
-" highlight LineNr ctermbg=none
-" highlight Folded ctermbg=none
-" highlight EndOfBuffer ctermbg=none 
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none 
 
 " filetype --------------------
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
