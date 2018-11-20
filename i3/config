@@ -9,6 +9,15 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# i3 gaps
+for_window [class="^.*"] border pixel 0
+
+gaps inner 6
+gaps outer 3
+
+bindsym $mod+z		gaps outer current plus 2
+bindsym $mod+Shift+z	gaps outer current minus 2
+
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
