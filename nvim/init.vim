@@ -1,8 +1,3 @@
-if &compatible
-  set nocompatible
-endif
-
-" Required:
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 if dein#load_state('~/.cache/dein')
@@ -10,7 +5,8 @@ if dein#load_state('~/.cache/dein')
 
   " TOML:
   let s:toml_dir = '~/.config/nvim/toml'
-  call dein#load_toml(s:toml_dir.'/main.toml', { 'lazy':0 })
+  call dein#load_toml(s:toml_dir.'/general.toml', { 'lazy':0 })
+  call dein#load_toml(s:toml_dir.'/lang-immediate.toml', { 'lazy':0 })
   call dein#load_toml(s:toml_dir.'/lang.toml', { 'lazy':1 })
 
   call dein#end()
@@ -32,7 +28,7 @@ set ambiwidth=double
 
 set clipboard+=unnamedplus
 
-set sh=bash
+set sh=zsh
 
 " Colorscheme
 set background=dark
@@ -45,8 +41,8 @@ highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none 
 
 " filetype --------------------
-autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
-autocmd FileType vue syntax sync fromstart
+" autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+" autocmd FileType vue syntax sync fromstart
 
 " Keybind --------------------
 " Window

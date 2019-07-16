@@ -1,0 +1,113 @@
+# General Plugins
+## plugin manager
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+## ui
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+# Template
+[[plugins]]
+repo = 'mattn/sonictemplate-vim'
+hook_add = '''
+  let g:sonictemplate_vim_template_dir = [
+  \ '$HOME/.config/nvim/templates'
+  \ ]
+'''
+
+# status line
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = {
+  \  'colorscheme' : 'Tomorrow_Night',
+  \}
+'''
+
+# filer
+[[plugins]]
+repo = 'cocopon/vaffle.vim'
+hook_add = '''
+  nnoremap <Space>f :Vaffle %:h<CR>
+'''
+
+# indent
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+  let g:indent_guides_enable_on_vim_startup = 1
+'''
+
+# replace
+[[plugins]]
+repo = 'osyo-manga/vim-over'
+
+# comment
+[[plugins]]
+repo = 'tyru/caw.vim'
+
+# Color scheme
+[[plugins]]
+repo = 'morhetz/gruvbox'
+
+# code completion
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#enable_smart_case = 1
+  let g:deoplete#auto_complete_start_length = 1
+
+  inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
+  inoremap <expr><s-tab> pumvisible() ? "<C-p>" : "<C-h>"
+'''
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+build = 'bash install.sh'
+rev = 'next'
+hook_add = '''
+  let g:LanguageClient_serverCommands = {
+    \ 'vue': ['vls'],
+    \ 'd': ['~/.dub/packages/.bin/dls-latest/dls'],
+    \ 'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
+    \   using LanguageServer;
+    \   using Pkg;
+    \   import StaticLint;
+    \   import SymbolServer;
+    \   env_path = dirname(Pkg.Types.Context().env.project_file);
+    \   debug = false; 
+    \   
+    \   server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, "", Dict());
+    \   server.runlinter = true;
+    \   run(server);
+    \ ']
+    \}
+
+  nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+  nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+  nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+hook_add = '''
+  imap <C-k> <Plug>(neosnippet_expand_or_jump)
+  smap <C-k> <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k> <Plug>(neosnippet_expand_target)
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# Git
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# quickrun
+[[plugins]]
+repo = 'thinca/vim-quickrun'

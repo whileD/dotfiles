@@ -5,7 +5,7 @@ for item in "${depend[@]}"; do
   if builtin command -v $item > /dev/null 2>&1; then
     echo "${item} ok."
   else
-    echo "${item} has not."
+    echo "${item} has no."
     let $notnext=true
   fi
 done
