@@ -25,6 +25,7 @@ set shiftwidth=2
 set updatetime=100
 set cursorline
 set ambiwidth=double
+set signcolumn=yes
 
 set clipboard+=unnamedplus
 
