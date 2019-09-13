@@ -1,6 +1,9 @@
 # zplug
 source ~/.zplug/init.zsh
 
+# cocos2d-x
+# source /etc/profile
+
 # Dependencies
 # - fzy
 # - rbenv

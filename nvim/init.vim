@@ -6,7 +6,7 @@ if dein#load_state('~/.cache/dein')
   " TOML:
   let s:toml_dir = '~/.config/nvim/toml'
   call dein#load_toml(s:toml_dir.'/general.toml', { 'lazy':0 })
-  call dein#load_toml(s:toml_dir.'/lang-immediate.toml', { 'lazy':0 })
+  call dein#load_toml(s:toml_dir.'/langi.toml', { 'lazy':0 })
   call dein#load_toml(s:toml_dir.'/lang.toml', { 'lazy':1 })
 
   call dein#end()

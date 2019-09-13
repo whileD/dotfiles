@@ -1,5 +1,0 @@
-# Julia
-# 遅延ロードするとautoloadが読み込まれないっぽい
-[[plugins]]
-repo = 'JuliaEditorSupport/julia-vim'
-on_ft = ['julia', 'jl']

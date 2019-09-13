@@ -53,21 +53,14 @@ repo = 'morhetz/gruvbox'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-merge = 0
 build = 'yarn install --frozen-lockfile'
 hook_add = '''
-  function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-  endfunction
-
   inoremap <silent><expr> <TAB>
-        \ pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ coc#refresh()
+        \ pumvisible() ? "\<C-n>" : "\<TAB>"
 
   inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
   inoremap <silent><expr> <c-space> coc#refresh()
+
 
   " Use `[c` and `]c` to navigate diagnostics
   nmap <silent> [c <Plug>(coc-diagnostic-prev)
