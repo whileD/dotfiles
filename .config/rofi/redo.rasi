@@ -1,0 +1,59 @@
+/* Redo Theme */
+
+* {
+  /* Theme setting */
+  highlight: bold italic;
+  scrollbar: true;
+
+  /* Redo colors */
+  redo-dark: #30303080;
+  redo-red:  #b5446180;
+  redo-blue: #27458780;
+  redo-deepblue: #26355d80;
+  redo-white: #f3f3f380;
+
+
+  /* Theme colors */
+  background: @redo-white;
+  background-color: @redo-dark;
+
+  foreground: @redo-dark;
+
+  font: "Ricty 14";
+}
+
+#window {
+  padding: 10;
+  background-color: @redo-red;
+}
+
+#mainbox {
+  padding: 5;
+}
+
+#prompt {
+  text-color: @redo-white;
+}
+
+#inputbar {
+  text-color: @redo-white;
+}
+
+
+#textbox {
+  text-color: @redo-white;
+}
+
+
+#element {
+  border: 0;
+  padding: 2;
+}
+
+#element normal {
+  text-color: @redo-white;
+}
+
+#element selected {
+  text-color: @redo-red;
+}
