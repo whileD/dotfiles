@@ -7,7 +7,7 @@ declare -Ar menu=(
 
   ["reboot"]="systemctl reboot"
   ["suspend"]="systemctl suspend"
-  ["shutdown"]="systemctl shutdown"
+  ["shutdown"]="systemctl poweroff"
 )
 
 function main() {
